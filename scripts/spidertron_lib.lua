@@ -127,8 +127,6 @@ local function copy_inventory(old_inventory, inventory, filter_table, overflow_i
           local item_data = {name = stack.name, count = stack.count, quality = stack.quality.name}
           if stack.is_tool then
             item_data.health = stack.health
-          end
-          if stack.is_item_with_entity_data then
             item_data.durability = stack.durability
           end
           table.insert(overflow_items, item_data)
